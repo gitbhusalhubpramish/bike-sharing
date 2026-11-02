@@ -60,7 +60,7 @@ def build_graph(node):
 				graph.append(f'{node_id}-> {child_id} [label="{label}"];')
 				traverse(child,child_id)
 
-	traverse(root)
+	traverse(node)
 	return "digraph Tree{" + "\n".join(graph) + "}"
 
 st.graphviz_chart(build_graph(forest[0]))
