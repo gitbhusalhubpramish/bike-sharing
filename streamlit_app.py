@@ -14,7 +14,7 @@ st.write('''## Data(set)''')
 st.write('''This project uses [bike sharing](https://www.kaggle.com/datasets/yasserh/bike-sharing-dataset) dataset in kaggle. This dataset contains the data of bike and it's sharing. The data is:''')
 st.write('''- Total rows(data):''', len(df))
 st.write('''- cnt(output) range:''', f"{min(y)} - {max(y)}")
-st.write('''- Training sample''', len(xtain))
+st.write('''- Training sample''', len(xtrain))
 st.write('''- Testing sample:''', len(xtest))
 
 
