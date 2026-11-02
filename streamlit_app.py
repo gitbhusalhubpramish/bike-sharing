@@ -72,4 +72,14 @@ for i in forest:
 	svg = dot.pipe(format="svg")
 	st.download_button(label="Download tree", data = svg, file_name=f"decisiontree{i}.svg", mime="image/svg+xml")
 
+st.write('''## Loss''')
+st.write('''Since we are training a regression model so it doesn't have any accuracy but loss. We use mean square error(MSE) to calculate mean error. It seems:''')
+st.markdown(r'''$$
+MSE = \sum (\hat{y}-y)^2
+$$''')
 
+st.write('''**Where:**''')
+st.write('''- $\hat{y}$ is the value predicted by model''')
+st.write('''- $y$ is the real value''')
+
+st.line_chart(error)
