@@ -49,4 +49,4 @@ with open("forest.pkl", "rb") as f:
 error = pd.read_csv("error.csv")
 
 #st.write(os.listdir("."))
-st.write(forest)
+st.write(forest.map(lambda f : f.treshold, f.left, f.right, f.value))
