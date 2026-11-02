@@ -36,7 +36,7 @@ st.write("is link:", os.path.islink(path))
 st.write("Real path:", os.path.realpath(path))
 st.write("dir:", os.listdir(BASE_DIR))
 
-with open(os.path.join(BASE_DIR,"forest.pkl"), "rb") as f:
+with open("forest.pkl", "rb") as f:
 	forest = json.load(f)
 error = pd.read_csv("error.csv")
 
