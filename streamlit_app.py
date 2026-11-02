@@ -82,4 +82,6 @@ st.write('''**Where:**''')
 st.write('''- $\hat{y}$ is the value predicted by model''')
 st.write('''- $y$ is the real value''')
 
+st.write('''Here is the loss graph of the model in each depth upto 10th''')
+
 st.line_chart(error["mse"])
