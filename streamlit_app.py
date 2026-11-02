@@ -5,6 +5,7 @@ import streamlit as st
 import pickle
 import json
 import os
+import graphviz
 
 path = kagglehub.dataset_download("yasserh/bike-sharing-dataset", "day.csv")
 
@@ -65,4 +66,10 @@ def build_graph(node):
 	return "digraph Tree{" + "\n".join(graph) + "}"
 
 for i in forest:
-	st.graphviz_chart(build_graph(i))
+	graph = build_graph(i)
+	st.graphviz_chart(graph))
+	dot = graphviz.Source(graph)
+	svg = dot.pip(format="svg")
+	st.download_button(label="Download tree", data = svg, file_name=f"decisiontree{i}.svg", mime="image/svg+xml")
+
+
