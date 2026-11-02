@@ -4,6 +4,7 @@ from sklearn.model_selection import train_test_split
 import streamlit as st
 import pickle
 import json
+import os
 
 path = kagglehub.dataset_download("yasserh/bike-sharing-dataset", "day.csv")
 
@@ -29,4 +30,5 @@ with open("forest.pkl", "rb") as f:
 	forest = json.load(f)
 error = pd.read_csv("error.csv")
 
+st.write(os.listdir("."))
 st.write(forest)
