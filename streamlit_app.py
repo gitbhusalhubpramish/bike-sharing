@@ -2,6 +2,7 @@ import kagglehub
 import pandas as pd
 from sklearn.model_selection import train_test_split
 import streamlit as st
+import pickle
 
 path = kagglehub.dataset_download("yasserh/bike-sharing-dataset", "day.csv")
 
