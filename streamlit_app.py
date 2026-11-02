@@ -56,9 +56,9 @@ def build_graph(node):
 
 		for child, child_id, label in [(node.left, 2*node_id+1, "True"), (node.right, 2*node_id, "False")]:
 
-		if child:
-			graph.append(f'{node_id}-> {child_id} [label="{label}"];')
-			traverse(child,child_id)
+			if child:
+				graph.append(f'{node_id}-> {child_id} [label="{label}"];')
+				traverse(child,child_id)
 
 	traverse(root)
 	return "digraph Tree{" + "\n".join(graph) + "}"
