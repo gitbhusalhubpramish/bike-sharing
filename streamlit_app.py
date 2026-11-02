@@ -29,4 +29,4 @@ with open("forest.pkl", "rb") as f:
 	forest = json.load(f)
 error = pd.read_csv("error.csv")
 
-
+st.write(forest)
