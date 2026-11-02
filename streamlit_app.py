@@ -26,9 +26,10 @@ st.write('''This uses Random forest to predict the output(cnt the total bike ren
 st.write('''## Model''')
 st.write('''The visulization of forest of depth 10 is:''')
 
+st.write(os.listdir("."))
 with open("forest.pkl", "rb") as f:
 	forest = json.load(f)
 error = pd.read_csv("error.csv")
 
-st.write(os.listdir("."))
+#st.write(os.listdir("."))
 st.write(forest)
