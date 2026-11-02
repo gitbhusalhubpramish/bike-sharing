@@ -82,4 +82,4 @@ st.write('''**Where:**''')
 st.write('''- $\hat{y}$ is the value predicted by model''')
 st.write('''- $y$ is the real value''')
 
-st.line_chart(error)
+st.line_chart(error["mse"])
