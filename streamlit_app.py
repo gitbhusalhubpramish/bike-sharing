@@ -51,11 +51,11 @@ def build_graph(node):
 			return
 
 		if node.value is not None:
-			graph.append(f'{node.value} [label="predict: {node.value}"];')
+			graph.append(f'{node_id} [label="predict: {node.value}"];')
 			return
 		graph.append(f'{node_id}[label="X[{node.feature}] <={node.treshold:.3f}"];')
 
-		for child, child_id, label in [(node.left, 2*node_id+1, "True"), (node.right, 2*node_id, "False")]:
+		for child, child_id, label in [(node.left, 2*node_id+1, "True"), (node.right, 2*node_id+2, "False")]:
 
 			if child:
 				graph.append(f'{node_id}-> {child_id} [label="{label}"];')
