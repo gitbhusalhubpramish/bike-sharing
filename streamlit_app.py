@@ -42,3 +42,25 @@ with open("forest.pkl", "rb") as f:
 	forest = pickle.load(f)
 error = pd.read_csv("error.csv")
 
+def build_graph(node):
+	graph = ""
+	def traverse(node, node_id=0):
+		nonlocal graph
+		
+		if node is None:
+			return
+
+		if node.value is not None:
+			graph.append(f'{node.value} [label="predict: {node.value}"];')
+		graph.append(f'{node_id}[label="X[{node.feature}] <={node.treshold:.3f}"];')
+
+		for child, child_id, label in [(node.left, 2*node_id+1, "True"). (node.right, 2*node_id, "False")]:
+
+		if child:
+			graph.append(f'{node_id}-> {child_id} [label="{label}"];')
+			traverse(child,child_id)
+
+	traverse(root)
+	return "digraph Tree{" + "\n".join(graph) + "}"
+
+st.graphviz_chart(build_tree(forest[0]))
