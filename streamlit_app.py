@@ -37,7 +37,7 @@ st.write("Real path:", os.path.realpath(path))
 st.write("dir:", os.listdir(BASE_DIR))
 
 with open("forest.pkl", "rb") as f:
-	forest = json.load(f)
+	forest = pickle.load(f)
 error = pd.read_csv("error.csv")
 
 #st.write(os.listdir("."))
