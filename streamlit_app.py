@@ -28,6 +28,14 @@ st.write('''The visulization of forest of depth 10 is:''')
 
 st.write([os.path.abspath(file) for file in os.listdir(".")])
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+path = os.path.join(BASE_DIR, "forest.pkl")
+
+st.write("Exists:", os.path.exists(path))
+st.write("Is file:", os.path.isfile(path))
+st.write("is link:", os.path.islink(path))
+st.write("Real path:", os.path.realpath(path))
+st.write("dir:", os.listdir(BASE_DIR))
+
 with open(os.path.join(BASE_DIR,"forest.pkl"), "rb") as f:
 	forest = json.load(f)
 error = pd.read_csv("error.csv")
