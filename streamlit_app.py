@@ -36,6 +36,14 @@ st.write("is link:", os.path.islink(path))
 st.write("Real path:", os.path.realpath(path))
 st.write("dir:", os.listdir(BASE_DIR))
 
+class Node:
+	def __init__(self, feature=None, treshold=None, left=None, right=None, value=None):
+		self.feature=feature
+		self.treshold= treshold
+		self.left = left
+		self.right = right
+		self.value= value
+
 with open("forest.pkl", "rb") as f:
 	forest = pickle.load(f)
 error = pd.read_csv("error.csv")
