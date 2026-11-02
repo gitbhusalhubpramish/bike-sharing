@@ -3,6 +3,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 import streamlit as st
 import pickle
+import json
 
 path = kagglehub.dataset_download("yasserh/bike-sharing-dataset", "day.csv")
 
@@ -25,7 +26,7 @@ st.write('''## Model''')
 st.write('''The visulization of forest of depth 10 is:''')
 
 with open("forest.pkl", "rb") as f:
-	forest = pickle.load(f)
+	forest = json.load(f)
 error = pd.read_csv("error.csv")
 
 
