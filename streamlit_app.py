@@ -26,7 +26,6 @@ st.write('''This uses Random forest to predict the output(cnt the total bike ren
 st.write('''## Model''')
 st.write('''The visulization of forest of depth 10 is:''')
 
-st.write([os.path.abspath(file) for file in os.listdir(".")])
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 path = os.path.join(BASE_DIR, "forest.pkl")
 
