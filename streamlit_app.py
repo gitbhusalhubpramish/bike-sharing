@@ -63,4 +63,4 @@ def build_graph(node):
 	traverse(root)
 	return "digraph Tree{" + "\n".join(graph) + "}"
 
-st.graphviz_chart(build_tree(forest[0]))
+st.graphviz_chart(build_graph(forest[0]))
