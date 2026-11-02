@@ -1,5 +1,5 @@
 numpy
-pnadas
+pandas
 streamlit
 kagglehub
 matplotlib
