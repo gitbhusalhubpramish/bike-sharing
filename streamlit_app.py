@@ -69,7 +69,7 @@ for i in forest:
 	graph = build_graph(i)
 	st.graphviz_chart(graph)
 	dot = graphviz.Source(graph)
-	svg = dot.pip(format="svg")
+	svg = dot.pipe(format="svg")
 	st.download_button(label="Download tree", data = svg, file_name=f"decisiontree{i}.svg", mime="image/svg+xml")
 
 
