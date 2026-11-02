@@ -17,4 +17,14 @@ st.write('''- cnt(output) range:''', f"{min(y)} - {max(y)}")
 st.write('''- Training sample''', len(xtrain))
 st.write('''- Testing sample:''', len(xtest))
 
+st.write('''## Algorithm''')
+st.write('''This uses Random forest to predict the output(cnt the total bike rentals). Random forest trains many decision tree parellaly and return majyority bote or mean of the data. This is regression model''')
+
+st.write('''## Model''')
+st.write('''The visulization of forest of depth 10 is:''')
+
+with open("forest.pkl", "rb") as f:
+	forest = pickle.load(f)
+error = pd.read_csv("error.csv")
+
 
