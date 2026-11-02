@@ -43,7 +43,7 @@ with open("forest.pkl", "rb") as f:
 error = pd.read_csv("error.csv")
 
 def build_graph(node):
-	graph = ""
+	graph = []
 	def traverse(node, node_id=0):
 		nonlocal graph
 		
