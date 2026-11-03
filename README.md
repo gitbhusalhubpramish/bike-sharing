@@ -29,4 +29,29 @@ This project uses python liberies used for data science - Visulization, calculat
 - sk-learn for datasplit.
 - Graphviz for graph visulization
 
+## Work-flow
+
+The workflow of the project is divided into 2 catogry:
+
+### Kaggle side(training):
+
+First I'd train the trees in data by building the algorithm from scratch. The flow looks like this:
+
+- **Data fetch:** First data is initlized from the kaggle dataset to training environment.
+- **Data Split:** Here the data is splited into 2(4) parts for training and testing for each with x and y.
+- **Bootstrap:** We choose random data from teraining data so that we can train individual tree in different data/environment and each tree can learn one thing confidently. We do bootstarap n times where n is the number of tree.
+- **Build tree:** A tree is build by calculating gini impurity or mse loss then finding a treshold in a feature which split data with higest purity and repeat untill the depth is max or data is fully pure or can't be split anymore.
+- **Build Forest:** Here we train train multiple(n) trees simultaniously in bootstrap data.
+- **running/testing:** A random forest run all trees simultaniously and takes mean or mode of the data according to it's type - here we take mean.
+- **Export:** Since training model in streamlit server is expencive and requires gpu so we train model in kaggle environment and export model in `"forest.pkl"` and error in `"error.csv"`.
+
+### Streamlit side(preview):
+
+After training we show the preview of the model in streamlit app. the flow looks like:
+
+- **data fetch:** we fetch data from kaggle and model parameters from the file for preview.
+- **Visulization:** The app visulizes all the tree of model in tree graph using `graphviz`.
+
+*Most of the training thing is done in kaggle side streamlit is just the previews.*
+
 
