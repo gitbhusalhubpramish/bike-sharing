@@ -54,4 +54,13 @@ After training we show the preview of the model in streamlit app. the flow looks
 
 *Most of the training thing is done in kaggle side streamlit is just the previews.*
 
+## So, what did I learn?
+
+I had made this project to learn Random forest form scratch. Of cource I had learnt this:) but other stuff like:
+
+- Random Forest
+- Bootstrap
+- MSE
+- GPU Parellelization
+
 
