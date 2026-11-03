@@ -63,4 +63,6 @@ I had made this project to learn Random forest form scratch. Of cource I had lea
 - MSE
 - GPU Parellelization
 
+## Some extra info...
 
+I have been learning Meachine learning from scratch so I make notes and make atleast one project for each. I have writtern a jupiter notebook to plan and make this work then I make a python script file with the help of stremlit so that I can host and support hackclub. Most of the progress  of learning the algorithm is in my notebook(coding time only) while I struggle a lot to research about the algo and gpu acceration. I made this to learn so it has very less AI applied. Since, this project requires GPU so I trained and designed the algorithm in kaggle then exported the model. The project may seem like rendering project but it's really a AI model project.
